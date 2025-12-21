@@ -5,12 +5,12 @@ terraform {
       version = "4.57.0"
     }
   }
-  # backend "azurerm" {
-  #   resource_group_name  = "rg-dhondu"
-  #   storage_account_name = "tfstatesdhondhuwala"
-  #   container_name       = "tfstates"
-  #   key                  = "dev.terraform.tfstate"
-  # }
+  backend "azurerm" {
+    resource_group_name  = "hehehe-rg"
+    storage_account_name = "tvsstg01"
+    container_name       = "mycontainer"
+    key                  = "dev.terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
