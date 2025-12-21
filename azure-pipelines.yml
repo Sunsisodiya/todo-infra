@@ -1,0 +1,14 @@
+name: todoi infra pipeline
+trigger: 
+ branches:
+    include:
+      - main 
+
+pool: default
+
+stages:
+  - stage: 
+    jobs:
+      - job: 
+        steps:
+        
