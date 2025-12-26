@@ -1,4 +1,4 @@
-name: todoi infra pipeline
+name: todo infra pipeline
 trigger: 
  branches:
     include:
