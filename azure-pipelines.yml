@@ -44,6 +44,7 @@ stages:
           inputs:
             provider: 'azurerm'
             command: 'plan'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
             environmentServiceNameAzureRM: 'todo_svc'
             environmentAzureRmOverrideSubscriptionID: '3d1ce785-6c4d-4565-bb5e-3b46939260a6'
 
