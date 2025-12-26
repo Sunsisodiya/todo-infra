@@ -9,7 +9,7 @@ variable "networks" {
     tags                = optional(map(string))
     subnets = optional(list(object({
       name             = string
-      address_prefixes = list(string)
+      address_prefix = list(string)
     })),[])
   }))
 }
