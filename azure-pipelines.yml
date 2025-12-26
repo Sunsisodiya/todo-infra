@@ -7,7 +7,8 @@ trigger:
 pool: default
 
 stages:
-  - stage: 
+  - stage:
+    displayName: Inint stage
     jobs:
       - job: 
         steps:
@@ -26,6 +27,7 @@ stages:
             backendAzureRmContainerName: 'mycontainer'
             backendAzureRmKey: 'dev.terraform.tfstate'
   - stage: 
+    displayName: Plan
     jobs:
       - job: 
         steps:
@@ -49,6 +51,7 @@ stages:
             environmentAzureRmOverrideSubscriptionID: '3d1ce785-6c4d-4565-bb5e-3b46939260a6'
 
   - stage: 
+    displayName: 'apply'
     jobs:
       - job: 
         steps:
