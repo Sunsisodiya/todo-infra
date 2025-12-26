@@ -17,7 +17,7 @@ stages:
         - task: TerraformTask@5
           inputs:
             provider: 'azurerm'
-            command: 'init -reconfigure'
+            command: 'init'
             workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
             backendServiceArm: 'todo_svc'
             backendAzureRmOverrideSubscriptionID: '3d1ce785-6c4d-4565-bb5e-3b46939260a6'
