@@ -12,7 +12,7 @@ resource "azurerm_virtual_network" "virtual_networks" {
     for_each = each.value.subnets
     content {
       name             = subnet.value.name
-      address_prefixes = subnet.value.address_prefix
+      address_prefix = subnet.value.address_prefix
     }
   }
 }

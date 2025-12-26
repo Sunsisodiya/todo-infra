@@ -21,11 +21,11 @@ networks = {
     subnets = [
       {
         name             = "snet-frontend-dev-01"
-        address_prefixes = ["10.0.1.0/24"]
+        address_prefix = ["10.0.1.0/24"]
       },
       {
         name             = "snet-backend-dev-01"
-        address_prefixes = ["10.0.2.0/24"]
+        address_prefix = ["10.0.2.0/24"]
       }
     ]
   }
