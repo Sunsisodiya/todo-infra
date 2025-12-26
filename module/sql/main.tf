@@ -6,7 +6,7 @@ resource "azurerm_mssql_server" "server" {
   resource_group_name          = each.value.rg_name
   version                      = "12.0"
   administrator_login          = each.value.admin
-  administrator_login_password = each.value.password
+  administrator_login_password = data.azurerm_key_vault_secret.sql_password.sql-admin-password[each.key].value
 }
 
 resource "azurerm_mssql_database" "database" {

@@ -5,6 +5,7 @@ variable "sql_servers" {
     rg_name  = string
     admin    = string
     password = string
+    kv_name  = optional(string)
   }))
 }
 

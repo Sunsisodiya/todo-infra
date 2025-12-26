@@ -8,8 +8,6 @@ variable "vms" {
     pip_name               = string
     vm_name                = string
     size                   = string
-    # admin_username         = string
-    # admin_password         = string
     kv_name                = optional(string)
     source_image_reference = map(string)
   }))

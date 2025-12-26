@@ -107,7 +107,8 @@ sql_servers = {
     location = "Central India"
     rg_name  = "rg-dev-01"
     admin    = "sqladminuser"
-    password = "Password@123"
+    # password = "Password@123"
+    kv_name  = "meradevkv"
   }
 }
 
