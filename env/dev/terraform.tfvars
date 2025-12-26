@@ -1,7 +1,7 @@
 rgs = {
   rg1 = {
     name       = "rg-dev-01"
-    location   = "Central India"
+    location   = "Spain central"
     managed_by = "Terraform"
     tags = {
       env = "dev"
@@ -12,7 +12,7 @@ rgs = {
 networks = {
   vnet1 = {
     name                = "vnet-dev-todoapp-01"
-    location            = "Central India"
+    location            = "Spain central"
     resource_group_name = "rg-dev-01"
     address_space       = ["10.0.0.0/16"]
     tags = {
@@ -34,7 +34,7 @@ networks = {
 public_ips = {
   pip1 = {
     name                = "pip-dev-todoapp-01"
-    location            = "Central India"
+    location            = "Spain central"
     resource_group_name = "rg-dev-01"
     allocation_method   = "Static"
     sku                 = "Standard"
@@ -45,7 +45,7 @@ public_ips = {
 
   pip2 = {
     name                = "pip-dev-todoapp-02"
-    location            = "Central India"
+    location            = "Spain central"
     resource_group_name = "rg-dev-01"
     allocation_method   = "Static"
     sku                 = "Standard"
@@ -57,8 +57,8 @@ public_ips = {
 
 key_vaults = {
   kv1 = {
-    kv_name  = "meradevkv"
-    location = "Central India"
+    kv_name  = "meradevkv1"
+    location = "Spain central"
     rg_name  = "rg-dev-01"
   }
 }
@@ -66,14 +66,14 @@ key_vaults = {
 vms = {
   vm1 = {
     nic_name    = "nic-frontend-dev-01"
-    location    = "Central India"
+    location    = "Spain central"
     rg_name     = "rg-dev-01"
     vnet_name   = "vnet-dev-todoapp-01"
     subnet_name = "snet-frontend-dev-01"
     pip_name    = "pip-dev-todoapp-01"
     vm_name     = "vm-frontend-dev-01"
     size        = "Standard_F2"
-    kv_name = "meradevkv"
+    kv_name = "meradevkv1"
     source_image_reference = {
       publisher = "Canonical"
       offer     = "0001-com-ubuntu-server-jammy"
@@ -84,14 +84,14 @@ vms = {
 
   vm2 = {
     nic_name    = "nic-backend-dev-01"
-    location    = "Central India"
+    location    = "Spain central"
     rg_name     = "rg-dev-01"
     vnet_name   = "vnet-dev-todoapp-01"
     subnet_name = "snet-backend-dev-01"
     pip_name    = "pip-dev-todoapp-02"
     vm_name     = "vm-backend-dev-01"
     size        = "Standard_F2"
-    kv_name = "meradevkv"
+    kv_name = "meradevkv1"
     source_image_reference = {
       publisher = "Canonical"
       offer     = "0001-com-ubuntu-server-jammy"
@@ -104,11 +104,11 @@ vms = {
 sql_servers = {
   sql1 = {
     name     = "sql-dev-todoapp-786"
-    location = "Central India"
+    location = "Spain central"
     rg_name  = "rg-dev-01"
     admin    = "sqladminuser"
     # password = "Password@123"
-    kv_name  = "meradevkv"
+    kv_name  = "meradevkv1"
   }
 }
 
