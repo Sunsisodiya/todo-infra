@@ -11,25 +11,20 @@ rgs = {
 
 networks = {
   vnet1 = {
-    name                = "vnet-dev-todoapp-01"
-    location            = "Spain central"
-    resource_group_name = "rg-dev-01"
-    address_space       = ["10.0.0.0/16"]
-    tags = {
-      environment = "dev"
-    }
+    name          = "vnet-dev-todoapp-01"
+    address_space = ["10.0.0.0/16"]
+    location      = "Central India"
+    rg_name       = "rg-dev-01"
+
     subnets = [
       {
-        name             = "snet-frontend-dev-01"
-        address_prefix = ["10.0.1.0/24"]
-      },
-      {
-        name             = "snet-backend-dev-01"
-        address_prefix = ["10.0.2.0/24"]
+        name             = "subnet-dev-01"
+        address_prefixes = ["10.0.1.0/24"]
       }
     ]
   }
 }
+
 
 public_ips = {
   pip1 = {
