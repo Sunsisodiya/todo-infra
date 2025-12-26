@@ -4,7 +4,7 @@ variable "sql_servers" {
     location = string
     rg_name  = string
     admin    = string
-    password = string
+    # password = string
     kv_name  = optional(string)
   }))
 }
