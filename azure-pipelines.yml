@@ -8,7 +8,7 @@ pool: default
 
 stages:
   - stage:
-    displayName: Inint stage
+    displayName: Init stage
     jobs:
       - job: 
         steps:
